@@ -1,0 +1,9 @@
+C:\Users\22897\Documents\GitHub\CGT\SF\SF\bin\SF.dll.config
+C:\Users\22897\Documents\GitHub\CGT\SF\SF\bin\SF.dll
+C:\Users\22897\Documents\GitHub\CGT\SF\SF\bin\SF.pdb
+C:\Users\22897\Documents\GitHub\CGT\SF\SF\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\22897\Documents\GitHub\CGT\SF\SF\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\22897\Documents\GitHub\CGT\SF\SF\obj\Debug\SF.csproj.CoreCompileInputs.cache
+C:\Users\22897\Documents\GitHub\CGT\SF\SF\obj\Debug\SF.dll
+C:\Users\22897\Documents\GitHub\CGT\SF\SF\obj\Debug\SF.pdb
+C:\Users\22897\Documents\GitHub\CGT\SF\SF\obj\Debug\SF.csprojResolveAssemblyReference.cache
