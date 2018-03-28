@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="SF.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="main.aspx.cs" Inherits="SF.main" %>
 
 <!DOCTYPE html>
 
@@ -6,14 +6,11 @@
 <head runat="server">
     <title></title>
 </head>
-    
-
-<body>
-<script>
+    <script>
     // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
         console.log('statusChangeCallback');
-        console.log('status check: ', response);
+        console.log(response);
         // The response object is returned with a status field that lets the
         // app know the current login status of the person.
         // Full docs on the response object can be found in the documentation
@@ -21,11 +18,10 @@
         if (response.status === 'connected') {
             // Logged into your app and Facebook.
             testAPI();
-            window.location = "https://localhost:44395/main.aspx";
+            
         } else {
             // The person is not logged into your app or we are unable to tell.
-            document.getElementById('status').innerHTML = 'Please log ' +
-                'into this app.';
+            window.location = "https://localhost:44395/login.aspx";
         }
     }
 
@@ -74,37 +70,19 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-    // Here we run a very simple test of the Graph API after login is
-    // successful.  See statusChangeCallback() for when this call is made.
-    function testAPI() {
-        console.log('Welcome!  Fetching your information.... ');
-        FB.api('/me', function (response) {
-            console.log('Successful login for: ' + response.name);
-        });
-    }
-
-    window.logout = function() {
-        FB.logout(function (response) {
-            // Person is now logged out
-            //window.location = "https://localhost:44395/login.aspx";
-        });
-    }
-
     function auth() {
-        alert("hello");
+        FB.logout(function (response) {
+            window.location = "https://localhost:44395/login.aspx";
+        });
     }
-</script>
-    <form id="form1" runat="server">
-        <div class="fb-login-button" data-width="200px" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false" id="auth" onclick="auth()"></div>
-        <div id="status">
 
+</script>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            this is main page
         </div>
-        <div
-          class="fb-like"
-          data-share="true"
-          data-width="450"
-          data-show-faces="true">
-        </div>
+        <span id="auth" onclick="javascript:auth()">Log out</span>
     </form>
 </body>
 </html>
