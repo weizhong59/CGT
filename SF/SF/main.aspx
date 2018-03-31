@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title></title>
 </head>
@@ -80,10 +81,33 @@
 </script>
 <body>
     <form id="form1" runat="server">
-        <div>
-            this is main page
+        <div class="navbar">
+            <div class="user"></div>
+            <img class="" src=""/>
+            <div class="btn"></div>
+            <div class="dropdown">
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                        <span id="auth" onclick="javascript:auth()">Log out</span>
+                    </div>
+            </div>
         </div>
-        <span id="auth" onclick="javascript:auth()">Log out</span>
+        <div class="main">
+            <div class="slideshow">
+
+            </div>
+            <div class="item_main">
+                <div class="item">
+                    <img class="" src=""/>
+                    <div class="item_info">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </form>
 </body>
 </html>
